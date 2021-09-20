@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TheCatApiSource</string>
+
+    <string name="boxes">boxes</string>
+    <string name="cloths">cloths</string>
+    <string name="hats">hats</string>
+</resources>

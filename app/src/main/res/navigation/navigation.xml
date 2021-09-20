@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/catSearchFragment">
+    <fragment
+        android:id="@+id/catSearchFragment"
+        android:name="com.anupras.apl.thecatapisource.ui.catsearch.CatSearchFragment"
+        android:label="fragment_cat"
+        tools:layout="@layout/fragment_cat_search" >
+        <action
+            android:id="@+id/action_catFragment_to_detailFragment"
+            app:destination="@id/catImageDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/catImageDetailFragment"
+        android:name="com.anupras.apl.thecatapisource.ui.details.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
+</navigation>
