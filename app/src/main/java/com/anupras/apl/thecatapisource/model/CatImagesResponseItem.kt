@@ -5,6 +5,5 @@ data class CatImagesResponseItem(
     val height: Int,
     val id: String,
     val url: String,
-    val width: Int,
-    val alt_names: String,
+    val width: Int
 )
