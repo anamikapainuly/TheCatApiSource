@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
         <import type="com.anupras.apl.thecatapisource.model.Categories" />
         <variable
@@ -7,12 +8,21 @@
             type="com.anupras.apl.thecatapisource.model.Categories" />
     </data>
 
-    <TextView
-        android:id="@+id/cat_title"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:gravity="center"
-        android:text="@{category.name.toString()}"
-        android:textStyle="bold" />
+        android:layout_height="@dimen/margin_padding_40dp"
+        android:paddingLeft="@dimen/full_padding_16dp"
+        android:paddingRight="@dimen/full_padding_16dp">
+
+        <TextView
+            android:id="@+id/cat_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/full_padding_16dp"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:text="@{category.name.toString()}"
+            android:textStyle="bold"/>
+    </RelativeLayout>
 
 </layout>

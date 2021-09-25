@@ -2,6 +2,7 @@
 <resources>
     <dimen name="margin_20">20dp</dimen>
     <dimen name="full_padding_16dp">16dp</dimen>
+    <dimen name="margin_padding_40dp">40dp</dimen>
     <dimen name="image_detail_padding_100">100dp</dimen>
     <dimen name="image_height_300dp">300dp</dimen>
     <dimen name="round_radius_10dp">10dp</dimen>

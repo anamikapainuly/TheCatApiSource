@@ -46,16 +46,19 @@ class CatSearchFragment : Fragment() {
         viewModel.getAllCategory()
         viewModel.allCategories.observe(viewLifecycleOwner) {
             when (it.getContentIfNotHandled()?.status) {
+                Status.LOADING-> {
+                    binding.progressBar.visibility = View.VISIBLE
+                }
                 Status.SUCCESS -> {
                     it.peekContent()?.data.let {
                         it?.forEach {
                             it.name
                         }
                         if (it != null) {
+                            binding.progressBar.visibility = View.GONE
                             populateList(it)
                         }
                     }
-
                 }
             }
         }

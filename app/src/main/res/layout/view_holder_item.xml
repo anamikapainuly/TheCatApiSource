@@ -15,6 +15,10 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/full_padding_16dp"
+        android:theme="@style/AppCard"
+        app:cardCornerRadius="@dimen/round_radius_10dp"
+        app:cardElevation="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -28,15 +32,17 @@
                 android:id="@+id/cat_image"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                app:load="@{catSearchResponse.url}"
                 android:contentDescription="@string/app_name"
+                app:load="@{catSearchResponse.url}"
                 tools:src="@tools:sample/backgrounds/scenic" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/cat_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/full_padding_16dp"
                 android:gravity="center"
+                android:maxLines="4"
                 android:text="@{catSearchResponse.url}"
                 android:textStyle="bold" />
         </LinearLayout>

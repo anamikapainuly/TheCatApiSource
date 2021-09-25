@@ -17,6 +17,7 @@ import com.anupras.apl.thecatapisource.R
 import com.anupras.apl.thecatapisource.databinding.SpinnerHolderItemBinding
 import com.anupras.apl.thecatapisource.model.Categories
 import com.bumptech.glide.Glide
+import java.util.*
 
 /**
  * Created by Anamika Painuly on 25/09/21.
