@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="half_margin_20">20dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="full_padding_16dp">16dp</dimen>
+    <dimen name="image_detail_padding_100">100dp</dimen>
+    <dimen name="image_height_300dp">300dp</dimen>
+    <dimen name="round_radius_10dp">10dp</dimen>
+    <dimen name="round_radius_20dp">20dp</dimen>
 </resources>

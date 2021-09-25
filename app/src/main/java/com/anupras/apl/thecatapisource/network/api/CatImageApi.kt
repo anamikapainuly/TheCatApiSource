@@ -1,9 +1,11 @@
-package com.anupras.apl.thecatapisource.api
+package com.anupras.apl.thecatapisource.network.api
+
 import com.anupras.apl.thecatapisource.model.CatDetailResponse
 import com.anupras.apl.thecatapisource.model.CatImagesResponseItem
 import com.anupras.apl.thecatapisource.model.Categories
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 /**
@@ -11,19 +13,19 @@ import retrofit2.http.Query
  */
 interface CatImageApi {
 
-   @GET("/v1/images/search/")
+    @GET("images/search/")
     suspend fun getAllCatImage(
         @Query("category_ids") category_ids: Int?,
         @Query("page") page: Int,
         @Query("limit") limit: Int
     ): Response<List<CatImagesResponseItem>>
 
-    @GET("/v1/categories")
+    @GET("images/{image_id}")
+    suspend fun getCatDetails(
+        @Path("image_id") image_id: String
+    ): Response<CatDetailResponse>
+
+    @GET("categories")
     suspend fun getAllCategory(): Response<List<Categories>>
 
-
-   @GET("/v1/images/")
-    suspend fun getCat(
-        @Query("image_id") imageId: String?
-    ): Response<CatDetailResponse>
 }

@@ -10,8 +10,11 @@ import com.bumptech.glide.Glide
  */
 
 @BindingAdapter("load")
-fun loadImage(view:ImageView, url:String)
-{
-    Glide.with(view).load(url).into(view)
-    Log.d("Check--","imageUrl is :$url")
+fun loadImage(view: ImageView, url: String?) {
+    url?.let {
+        Glide.with(view).load(it).into(view)
+        Log.d("Check--", "imageUrl is :$url")
+    }
+
+
 }

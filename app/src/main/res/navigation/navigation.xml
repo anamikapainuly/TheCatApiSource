@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     app:startDestination="@id/catSearchFragment">
+
     <fragment
         android:id="@+id/catSearchFragment"
         android:name="com.anupras.apl.thecatapisource.ui.catsearch.CatSearchFragment"
@@ -17,5 +18,12 @@
         android:id="@+id/catImageDetailFragment"
         android:name="com.anupras.apl.thecatapisource.ui.details.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="imageId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
 </navigation>

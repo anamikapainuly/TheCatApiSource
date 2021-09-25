@@ -2,7 +2,8 @@ package com.anupras.apl.thecatapisource.hilt
 
 
 import com.anupras.apl.thecatapisource.BuildConfig
-import com.anupras.apl.thecatapisource.api.CatImageApi
+import com.anupras.apl.thecatapisource.network.api.CatImageApi
+import com.anupras.apl.thecatapisource.repository.CatRepository
 import com.anupras.apl.thecatapisource.utils.Constants
 import dagger.Module
 import dagger.Provides
@@ -24,7 +25,8 @@ object HiltModules {
 
     // Define the interceptor, add authentication headers
     private val interceptor = Interceptor { chain ->
-        val newRequest: Request = chain.request().newBuilder().addHeader("x-api-key: ", BuildConfig.API_KEY).build()
+        val newRequest: Request =
+            chain.request().newBuilder().addHeader("x-api-key", BuildConfig.API_KEY).build()
         chain.proceed(newRequest)
     }
     private val builder = OkHttpClient.Builder()
@@ -39,5 +41,10 @@ object HiltModules {
             .baseUrl(Constants.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build().create(CatImageApi::class.java)
+    }
+
+    @Provides
+    fun provideRepository(catImageApi: CatImageApi): CatRepository {
+        return CatRepository(catImageApi)
     }
 }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="com.anupras.apl.thecatapisource.model.Categories" />
+        <variable
+            name="category"
+            type="com.anupras.apl.thecatapisource.model.Categories" />
+    </data>
+
+    <TextView
+        android:id="@+id/cat_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="@{category.name.toString()}"
+        android:textStyle="bold" />
+
+</layout>

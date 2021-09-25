@@ -5,7 +5,8 @@ package com.anupras.apl.thecatapisource.utils
  */
 object Constants {
 
-    const val BASE_URL= "https://api.thecatapi.com/"
+    const val BASE_URL= "https://api.thecatapi.com/v1/"
     const val LIMIT= 10
+    const val STARTING_PAGE_INDEX = 1
 
 }
